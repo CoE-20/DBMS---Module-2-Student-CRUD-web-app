@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 a{color:#808080; text-decoration: none!important;}
 
@@ -72,65 +71,3 @@ abbr{text-decoration:none;}
 #footer-details span{padding: 0 2px; font-size: 12px; font-family: 'Open Sans', sans-serif;}
 #footer-details i{padding: 0 2px; }
 #footer-details a:hover{color:#fff;}
-=======
-.navbar-default{
-	padding-top: 15px;
-	padding-bottom: 15px;
-	background-color: #000;
-
-}
-
-.navbar-default i a{
-	font-family: 'Play', sans-serif;
-	font-size: 45px;
-	text-decoration: none;
-	padding-left: 15px;
-	padding-top: 0;
-	color: #909090;
-	webkit-transition:color 2s linear;
-	transition:color 2s linear;
-	
-}
-
-.navbar-default i a:hover{
-	color: #3FCAFD;
-}
-
-#create{
-
-	margin-top: 150px;
-	color: #393A3A
-}
-
-.form-horizontal{
-	-webkit-border-radius: 10px 10px 10px 10px;
-	border-radius: 10px 10px 10px 10px;
-	padding-bottom: 40px;
-	padding-right: 40px;
-	padding-left: 20px;
-	padding-top: 20px;
-	-webkit-box-shadow: 1px 1px 5px 1px #E0E0E0;
-	box-shadow: 1px 1px 5px 1px #E0E0E0;
-	background: #F1F1F1;
-}
-
-.fa-user{
-
-	padding-right: 5px;
-}
-
-#table {
-	margin-top: 110px;
-
-}
-
-#icon{
-
-	padding-left: 5px;
-	padding-right: 5px;
-}
-
-.thead{
-	font-style: bold;
-}
->>>>>>> 542908cfafd42156773d4f0751aa784c9e79c0a6
