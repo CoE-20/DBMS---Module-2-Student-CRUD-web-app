@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Students List</title>
+    
+    <link type="text/css" href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link href='http://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+
+    <link type="text/css" href="/stylesheet/stylesheet.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class = "container-fluid" id= "navigation-wrapper">
+        <div class = "row">
+            <nav class="navbar navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+                <i class="fa fa-database fa-2x"><a href = "/">Student Information System</a></i>
+            </div>
+          </div>
+        </nav>
+        </div>
+    </div>
+
+    <div class = "container" id = "table-wrapper">
+         <div class = "row">
+            <div class= "col-md-12" id= "title">
+                       <br><i class="fa fa-users fa-1x"></i>Students List <br> <br>
+                    </div>
+            <div class = "col-md-10 col-md-offset-1">
+                <table class="table table-hover table-striped">
+                    <thead>    
+                        <tr>
+                             <td > <strong>First Name </strong></td>
+                             <td > <strong>Middle Initial</strong></td>
+                             <td > <strong>Last Name</strong></td>
+                             <td > <strong>Age</strong></td>
+                        </tr>
+                    </thead>
+                    {% for student in student_list %}
+                    
+                    <tbody>
+                        <tr>
+                             <td >{{student.first_name}}</td>
+                             <td >{{student.mid_int}}</td>
+                             <td >{{student.last_name}}</td>
+                             <td >{{student.age}}</td>
+                             <td ><a href="/student/edit/{{student.key.id()}}"><acronym title="Edit"><span id = "settings" class = "fa fa-pencil-square-o"></span></acronym></a></td>
+                             <td ><a href="/student/delete/{{student.key.id()}}"><acronym title="Delete"><span id = "settings" class = "fa fa-times-circle"></span></acronym></a></td>
+                             <td ><a href="/student/view/{{student.key.id()}}"><acronym title="View"><span id = "settings" class = "fa fa-eye"></span></acronym></a></td>
+                        </tr>   
+                    </tbody>       
+        <!-- <li>{{student.first_name}} {{student.last_name}} {{student.mid_int}} {{student.age}} <a href='/student/edit/{{student.key.id()}}'>edit</a> &nbsp <a href='/student/delete/{{student.key.id()}}'>delete</a> &nbsp <a href='/student/view/{{student.key.id()}}'>view</a></li> -->
+            {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class = "container-fluid" id = "footer-wrapper">
+        <div class="row">
+            <div class = "container">
+                <div class="col-md-2" id = "footer-details">   
+                    <a href "https://github.com/CoE-20"><i class = "fa fa-github"></i><span >COE-20</span></a>
+                </div>
+                <div class="col-md-7 col-md-push-4" id = "footer-details">
+                    <a href = "https://github.com/JMEllarina"><i class = "fa fa-github"></i><span>Joanna Marie A. Ellarina</span></a>
+                    <span>      </span>
+                    <a = href = "https://github.com/Carowick122221"><i class = "fa fa-github"></i><span >Beatrice Nicole R. Quindoyos</span></a>
+                </div>
+            </div>
+        </div>
+    </div>   
+   
+</body>
+</html>

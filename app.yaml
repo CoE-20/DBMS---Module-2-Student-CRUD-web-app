@@ -1,0 +1,31 @@
+# app.yaml = application config file
+
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /fontawesome
+  static_dir: fontawesome
+
+- url: /bootstrap
+  static_dir: bootstrap
+
+- url: /resources
+  static_dir: resources
+
+- url: /stylesheet
+  static_dir: stylesheet
+
+- url: /javascript
+  static_dir: javascript
+
+- url: /.*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
