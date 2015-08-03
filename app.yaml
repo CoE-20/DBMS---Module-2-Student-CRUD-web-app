@@ -9,6 +9,7 @@ handlers:
 - url: /fontawesome
   static_dir: fontawesome
 
+<<<<<<< HEAD
 - url: /bootstrap
   static_dir: bootstrap
 
@@ -20,6 +21,13 @@ handlers:
 
 - url: /javascript
   static_dir: javascript
+=======
+- url: /stylesheet
+  static_dir: stylesheet
+
+- url: /bootstrap
+  static_dir: bootstrap
+>>>>>>> 542908cfafd42156773d4f0751aa784c9e79c0a6
 
 - url: /.*
   script: main.app

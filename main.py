@@ -4,7 +4,10 @@ import jinja2
 import os
 import logging
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 542908cfafd42156773d4f0751aa784c9e79c0a6
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
@@ -19,8 +22,13 @@ class Student(ndb.Model):
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
+<<<<<<< HEAD
         template = JINJA_ENVIRONMENT.get_template('main_page.html')
         self.response.write(template.render())
+=======
+        self.response.headers['Content-Type'] = 'text/html'
+        self.response.write('<h1>Main Page</h1>')
+>>>>>>> 542908cfafd42156773d4f0751aa784c9e79c0a6
 
 class AboutPage(webapp2.RequestHandler):
     def get(self):
@@ -29,8 +37,13 @@ class AboutPage(webapp2.RequestHandler):
 
 class SuccessPage(webapp2.RequestHandler):
     def get(self):
+<<<<<<< HEAD
         template = JINJA_ENVIRONMENT.get_template('success_page.htm')
         self.response.write(template.render())
+=======
+        self.response.headers['Content-Type'] = 'text/html'
+        self.response.write('Success! <a href="/student/list">view students</a> <a href="/student/create">create new students</a>')
+>>>>>>> 542908cfafd42156773d4f0751aa784c9e79c0a6
 
 class CreateStudentPage(webapp2.RequestHandler):
     def get(self):
@@ -45,6 +58,10 @@ class CreateStudentPage(webapp2.RequestHandler):
         student.age = int(self.request.get('age'))
         student.put()
         self.redirect('/success')
+<<<<<<< HEAD
+=======
+
+>>>>>>> 542908cfafd42156773d4f0751aa784c9e79c0a6
 class StudentListPage(webapp2.RequestHandler):
     def get(self):
         students = Student.query().order(-Student.date).fetch()
